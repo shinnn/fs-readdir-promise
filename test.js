@@ -28,7 +28,7 @@ test('fsReadDirPromise()', function(t) {
     t.equal(err.code, 'ENOENT', specs[1]);
   });
 
-  t.throws(readDir.bind(null, true), /TypeError/, specs[2]);
+  t.throws(readDir.bind(null, true), /TypeError.*not a string/, specs[2]);
 
-  t.throws(readDir.bind(null), /TypeError/, specs[3]);
+  t.throws(readDir.bind(null), /TypeError.*not a string/, specs[3]);
 });
