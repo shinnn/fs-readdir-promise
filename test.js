@@ -1,6 +1,6 @@
 'use strict';
 
-var fs = require('fs');
+var fs = require('graceful-fs');
 
 var readDir = require('./');
 var test = require('tape');
