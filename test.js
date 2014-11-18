@@ -24,12 +24,12 @@ test('fsReadDirPromise()', function(t) {
 
     function onFulfilled(files) {
       t.deepEqual(files, expected, specs[0]);
-    };
+    }
 
     /* istanbul ignore next */
     function onRejected(err) {
       t.fail(err);
-    };
+    }
 
     readDir('./').then(onFulfilled, onRejected);
   });
