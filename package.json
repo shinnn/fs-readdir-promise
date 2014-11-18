@@ -1,6 +1,6 @@
 {
   "name": "fs-readdir-promise",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Promise version of fs.readdir",
   "repository": "shinnn/fs-readdir-promise",
   "author": {
