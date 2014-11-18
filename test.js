@@ -15,12 +15,23 @@ test('fsReadDirPromise()', function(t) {
 
   t.plan(specs.length);
 
-  readDir('./')
-  .then(function(files) {
-    t.deepEqual(files, fs.readdirSync('./'), specs[0]);
-  })
-  .then(function(err) {
-    t.fails(err);
+  fs.readdir('./', function(err, expected) {
+    /* istanbul ignore if */
+    if (err) {
+      t.fail(err);
+      return;
+    }
+
+    function onFulfilled(files) {
+      t.deepEqual(files, expected, specs[0]);
+    };
+
+    /* istanbul ignore next */
+    function onRejected(err) {
+      t.fail(err);
+    };
+
+    readDir('./').then(onFulfilled, onRejected);
   });
 
   readDir('__this__directory__does__not__exist__')
