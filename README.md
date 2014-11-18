@@ -1,7 +1,7 @@
 # fs-readdir-promise 
 
 [![Build Status](https://travis-ci.org/shinnn/fs-readdir-promise.svg?branch=master)](https://travis-ci.org/shinnn/fs-readdir-promise)
-[![Build status](https://ci.appveyor.com/api/projects/status/5sacvq0w9x7mwkwd)](https://ci.appveyor.com/project/ShinnosukeWatanabe/fs-readdir-promise)
+[![Build status](https://ci.appveyor.com/api/projects/status/401attqixqs2jofe?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/fs-readdir-promise)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/fs-readdir-promise.svg)](https://coveralls.io/r/shinnn/fs-readdir-promise)
 [![Dependency Status](https://david-dm.org/shinnn/fs-readdir-promise.svg)](https://david-dm.org/shinnn/fs-readdir-promise)
 [![devDependency Status](https://david-dm.org/shinnn/fs-readdir-promise/dev-status.svg)](https://david-dm.org/shinnn/fs-readdir-promise#info=devDependencies)
@@ -27,7 +27,7 @@ readdir('path/to/dir')
 [Use npm.](https://www.npmjs.org/doc/cli/npm-install.html)
 
 ```
-npm install --save fs-readdir-promise
+npm install fs-readdir-promise
 ```
 
 ## API
