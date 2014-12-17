@@ -1,12 +1,12 @@
 # fs-readdir-promise 
 
-[![Build Status](https://travis-ci.org/shinnn/fs-readdir-promise.svg?branch=master)](https://travis-ci.org/shinnn/fs-readdir-promise)
+[![Build Status](https://img.shields.io/travis/shinnn/fs-readdir-promise.svg?style=flat)](https://travis-ci.org/shinnn/fs-readdir-promise)
 [![Build status](https://ci.appveyor.com/api/projects/status/401attqixqs2jofe?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/fs-readdir-promise)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/fs-readdir-promise.svg)](https://coveralls.io/r/shinnn/fs-readdir-promise)
-[![Dependency Status](https://david-dm.org/shinnn/fs-readdir-promise.svg)](https://david-dm.org/shinnn/fs-readdir-promise)
-[![devDependency Status](https://david-dm.org/shinnn/fs-readdir-promise/dev-status.svg)](https://david-dm.org/shinnn/fs-readdir-promise#info=devDependencies)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/fs-readdir-promise.svg?style=flat)](https://coveralls.io/r/shinnn/fs-readdir-promise)
+[![Dependency Status](https://david-dm.org/shinnn/fs-readdir-promise.svg?style=flat)](https://david-dm.org/shinnn/fs-readdir-promise)
+[![devDependency Status](https://david-dm.org/shinnn/fs-readdir-promise/dev-status.svg?style=flat)](https://david-dm.org/shinnn/fs-readdir-promise#info=devDependencies)
 
-[Promise] version of [`fs.readdir`](http://nodejs.org/api/fs.html#fs_fs_readdir_path_callback)
+[Promises/A+][Promise] version of [`fs.readdir`](http://nodejs.org/api/fs.html#fs_fs_readdir_path_callback)
 
 ```javascript
 var readdir = require('fs-readdir-promise');
@@ -22,11 +22,11 @@ readdir('path/to/dir')
 
 ## Installation
 
-[![NPM version](https://badge.fury.io/js/fs-readdir-promise.svg)](http://badge.fury.io/js/fs-readdir-promise)
+[![NPM version](https://img.shields.io/npm/v/fs-readdir-promise.svg?style=flat)](http://badge.fury.io/js/fs-readdir-promise)
 
 [Use npm.](https://www.npmjs.org/doc/cli/npm-install.html)
 
-```
+```sh
 npm install fs-readdir-promise
 ```
 
