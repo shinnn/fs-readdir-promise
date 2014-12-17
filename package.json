@@ -38,8 +38,8 @@
     "thenable"
   ],
   "dependencies": {
-    "es6-promise": "^2.0.0",
-    "graceful-fs": "^3.0.5"
+    "graceful-fs": "^3.0.5",
+    "wrap-promise": "^1.0.0"
   },
   "devDependencies": {
     "eslint": "^0.10.2",

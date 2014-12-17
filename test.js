@@ -2,18 +2,13 @@
 
 var fs = require('graceful-fs');
 
-var readDir = require('./');
+var readdir = require('./');
 var test = require('tape');
 
-test('fsReadDirPromise()', function(t) {
-  var specs = [
-    'should get a file paths of a directory.',
-    'should be rejected with an error when fs.readdir fails.',
-    'should throw a type error when the path is not a string.',
-    'should throw a type error when it takes no arguments.'
-  ];
+test('fsReaddirPromise()', function(t) {
+  t.plan(5);
 
-  t.plan(specs.length);
+  t.equal(readdir.name, 'fsReaddirPromise', 'should have a function name.');
 
   fs.readdir('./', function(err, expected) {
     /* istanbul ignore if */
@@ -22,24 +17,24 @@ test('fsReadDirPromise()', function(t) {
       return;
     }
 
-    function onFulfilled(files) {
-      t.deepEqual(files, expected, specs[0]);
-    }
-
-    /* istanbul ignore next */
-    function onRejected(err) {
-      t.fail(err);
-    }
-
-    readDir('./').then(onFulfilled, onRejected);
+    readdir('./').then(function(files) {
+      t.deepEqual(files, expected, 'should get a file paths of a directory.');
+    }, t.fail);
   });
 
-  readDir('__this__directory__does__not__exist__')
-  .catch(function(err) {
-    t.equal(err.code, 'ENOENT', specs[1]);
+  readdir('__this__directory__does__not__exist__').catch(function(err) {
+    t.equal(err.code, 'ENOENT', 'should be rejected with an error when fs.readdir fails.');
   });
 
-  t.throws(readDir.bind(null, true), /TypeError.*not a string/, specs[2]);
+  t.throws(
+    readdir.bind(null, true),
+    /TypeError.*path/,
+    'should throw a type error when the path is not a string.'
+  );
 
-  t.throws(readDir.bind(null), /TypeError.*not a string/, specs[3]);
+  t.throws(
+    readdir.bind(null),
+    /TypeError.*path/,
+    'should throw a type error when it takes no arguments.'
+  );
 });
