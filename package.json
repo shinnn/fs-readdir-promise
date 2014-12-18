@@ -1,7 +1,7 @@
 {
   "name": "fs-readdir-promise",
-  "version": "1.0.0",
-  "description": "Promise version of fs.readdir",
+  "version": "1.0.1",
+  "description": "Promises/A+ version of fs.readdir",
   "repository": "shinnn/fs-readdir-promise",
   "author": {
     "name": "Shinnosuke Watanabe",
